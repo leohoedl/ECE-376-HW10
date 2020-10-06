@@ -1,0 +1,818 @@
+HI-TECH Software C Compiler 
+
+Linker command line:
+
+\
+  --edf=C:\Program Files (x86)\HI-TECH Software\PICC-18\PRO\9.63\dat\en_msgs.txt \
+  -cs -h+HW10.sym -z -Q18F4620 -ol.obj -MHW10.map -E1 -ACODE=0800h-0FFFFh \
+  -ACONST=00h-0FFFFh -ASMALLCONST=01000h-010FFhx240 \
+  -AMEDIUMCONST=01000h-0FFFFh -ARAM=00h-0FFhx15,0F00h-0F7Fh \
+  -ABIGRAM=00h-0F7Fh -ACOMRAM=00h-07Fh -AABS1=00h-0F7Fh -ABANK0=00h-0FFh \
+  -ABANK1=0100h-01FFh -ABANK2=0200h-02FFh -ABANK3=0300h-03FFh \
+  -ABANK4=0400h-04FFh -ABANK5=0500h-05FFh -ABANK6=0600h-06FFh \
+  -ABANK7=0700h-07FFh -ABANK8=0800h-08FFh -ABANK9=0900h-09FFh \
+  -ABANK10=0A00h-0AFFh -ABANK11=0B00h-0BFFh -ABANK12=0C00h-0CFFh \
+  -ABANK13=0D00h-0DFFh -ABANK14=0E00h-0EFFh -ABANK15=0F00h-0F7Fh \
+  -ANVRAM=0F00h-0F7Fh \
+  -preset_vec=0800h,intcode=0808h,intcodelo,powerup,init,end_init \
+  -pramtop=01000h -psmallconst=SMALLCONST -pmediumconst=MEDIUMCONST \
+  -pconst=CONST -pparam1=BANK1 -AFARRAM=00h-00h -ACONFIG=0300000h-030000Dh \
+  -pconfig=CONFIG -AIDLOC=0200000h-0200007h -pidloc=IDLOC \
+  -AEEDATA=0F00000h-0F003FFh -peeprom_data=EEDATA \
+  -prdata=COMRAM,nvrram=COMRAM,nvbit=COMRAM,rbss=COMRAM,rbit=COMRAM \
+  -pfarbss=FARRAM,fardata=FARRAM \
+  -pintsave_regs=BIGRAM,bigbss=BIGRAM,bigdata=BIGRAM -pbss=RAM \
+  -pidata=CODE,irdata=CODE,ibigdata=CODE,ifardata=CODE \
+  C:\Users\leeee\AppData\Local\Temp\s1e4s.obj HW10.obj 
+
+Object code version is 3.10
+
+Machine type is 18F4620
+
+Call graph: (short form)
+
+*_main size 0,34 offset 0
+     _LCD_Init size 0,1 offset 34
+         _LCD_Inst size 1,1 offset 36
+             _LCD_Strobe size 0,0 offset 54
+                 _LCD_Pause size 0,2 offset 54
+             _Wait_ms size 2,4 offset 38
+         _Wait_ms size 2,4 offset 38
+     _Wait_ms size 2,4 offset 38
+     ___lldiv size 8,6 offset 91
+     ___lltoft size 4,8 offset 91
+         ___ftpack size 3,3 offset 135
+*    ___ftmul size 6,7 offset 122
+*        ___ftunpack size 4,4 offset 135
+         ___ftpack size 3,3 offset 135
+*    _sprintf size 9,48 offset 34
+         _isdigit size 1,0 offset 91
+         ___wmul size 4,2 offset 122
+         ___ftneg size 3,0 offset 91
+         ___awdiv size 4,5 offset 122
+*        _scale size 3,28 offset 91
+             ___awdiv size 4,5 offset 122
+             ___wmul size 4,2 offset 122
+             ___awmod size 4,3 offset 122
+*            ___ftmul size 6,7 offset 122
+*        ___ftmul size 6,7 offset 122
+         ___ftge size 6,3 offset 91
+         ___asftdiv size 5,0 offset 91
+             ___ftdiv size 6,8 offset 96
+                 ___ftunpack size 4,4 offset 135
+                 ___ftpack size 3,3 offset 135
+         ___fttol size 4,6 offset 91
+             ___ftunpack size 4,4 offset 135
+         ___lltoft size 4,8 offset 91
+         ___ftsub size 6,0 offset 96
+             ___ftadd size 6,6 offset 102
+                 ___ftunpack size 4,4 offset 135
+                 ___ftpack size 3,3 offset 135
+         ___asftadd size 5,0 offset 91
+             ___ftadd size 6,6 offset 102
+         ___asftmul size 5,0 offset 91
+             ___ftmul size 6,7 offset 122
+         ___lldiv size 8,6 offset 91
+         ___llmod size 8,2 offset 91
+         ___awmod size 4,3 offset 122
+         _fround size 3,17 offset 91
+             ___awdiv size 4,5 offset 122
+             ___wmul size 4,2 offset 122
+             ___awmod size 4,3 offset 122
+             ___ftmul size 6,7 offset 122
+         __tdiv_to_l_ size 6,7 offset 91
+             ___ftunpack size 4,4 offset 135
+         ___asftsub size 5,0 offset 91
+             ___ftsub size 6,0 offset 96
+     _LCD_Move size 2,0 offset 34
+         _LCD_Inst size 1,1 offset 36
+     _LCD_Out size 6,12 offset 34
+         _LCD_Write size 1,1 offset 52
+             _LCD_Strobe size 0,0 offset 54
+         ___almod size 8,3 offset 52
+         ___aldiv size 8,7 offset 52
+     _LCD_Write size 1,1 offset 52
+
+Estimated maximum call depth: 4
+
+*intlevel2 size 0,0 offset 143
+*    _IntServe size 0,13 offset 143
+
+Estimated maximum call depth: 1
+
+
+                Name          Link     Load   Length Selector Space Scale
+C:\Users\leeee\AppData\Local\Temp\s1e4s.obj
+                end_init       824      824       12     404     0
+                init           818      818        C     404     0
+                reset_vec      800      800        4     400     0
+HW10.obj        intcode        808      808       10     404     0
+                smallcons     1000     1000       B4     800     0
+                text26        5290     5290       7E     85A     0
+                text25        55EC     55EC       14     85A     0
+                text27        4A2A     4A2A      130     85A     0
+                text29        54D2     54D2       44     85A     0
+                text28        430A     430A      18E     85A     0
+                text21        5374     5374       4E     85A     0
+                text20        3D8A     3D8A      204     85A     0
+                text22        5406     5406       44     85A     0
+                text24        530E     530E       66     85A     0
+                text23        4152     4152      1B8     85A     0
+                text35        500A     500A       C6     85A     0
+                text31        5590     5590       36     85A     0
+                text30        4C70     4C70      108     85A     0
+                text32        34C6     34C6      33A     85A     0
+                text34        48EC     48EC      13E     85A     0
+                text33        50D0     50D0       AA     85A     0
+                text19        55C6     55C6       26     85A     0
+                text5         2F36     2F36      590     85A     0
+                text4         517A     517A       92     85A     0
+                text6         4D78     4D78       E2     85A     0
+                text8         5516     5516       3E     85A     0
+                text7         3800     3800      308     85A     0
+                text0         3B08     3B08      282     85A     0
+                text1         4620     4620      188     85A     0
+                text3         10B4     10B4     1E82     85A     0
+                text2         520C     520C       84     85A     0
+                text15        4F3A     4F3A       D0     85A     0
+                text14        4B5A     4B5A      116     85A     0
+                text16        4498     4498      188     85A     0
+                text18        3F8E     3F8E      1C4     85A     0
+                text17        5554     5554       3C     85A     0
+                text10        544A     544A       44     85A     0
+                text9         47A8     47A8      144     85A     0
+                text11        53C2     53C2       44     85A     0
+                text13        548E     548E       44     85A     0
+                text12        4E5A     4E5A       E0     85A     0
+
+COMMON          param1         100      100       9C     100     1
+
+TOTAL           Name          Link     Load   Length  Space
+        CLASS   CODE           
+                end_init       824      824       12     0
+                intcode        808      808       10     0
+                init           818      818        C     0
+                reset_vec      800      800        4     0
+                text26        5290     5290       7E     0
+                text25        55EC     55EC       14     0
+                text27        4A2A     4A2A      130     0
+                text29        54D2     54D2       44     0
+                text28        430A     430A      18E     0
+                text21        5374     5374       4E     0
+                text20        3D8A     3D8A      204     0
+                text22        5406     5406       44     0
+                text24        530E     530E       66     0
+                text23        4152     4152      1B8     0
+                text35        500A     500A       C6     0
+                text31        5590     5590       36     0
+                text30        4C70     4C70      108     0
+                text32        34C6     34C6      33A     0
+                text34        48EC     48EC      13E     0
+                text33        50D0     50D0       AA     0
+                text19        55C6     55C6       26     0
+                text5         2F36     2F36      590     0
+                text4         517A     517A       92     0
+                text6         4D78     4D78       E2     0
+                text8         5516     5516       3E     0
+                text7         3800     3800      308     0
+                text0         3B08     3B08      282     0
+                text1         4620     4620      188     0
+                text3         10B4     10B4     1E82     0
+                text2         520C     520C       84     0
+                text15        4F3A     4F3A       D0     0
+                text14        4B5A     4B5A      116     0
+                text16        4498     4498      188     0
+                text18        3F8E     3F8E      1C4     0
+                text17        5554     5554       3C     0
+                text10        544A     544A       44     0
+                text9         47A8     47A8      144     0
+                text11        53C2     53C2       44     0
+                text13        548E     548E       44     0
+                text12        4E5A     4E5A       E0     0
+
+        CLASS   CONST          
+
+        CLASS   SMALLCONST     
+                smallcons     1000     1000       B4     0
+
+        CLASS   MEDIUMCONST    
+
+        CLASS   RAM            
+
+        CLASS   BIGRAM         
+
+        CLASS   COMRAM         
+
+        CLASS   ABS1           
+                abs_s1           0        0       10     1
+
+        CLASS   BANK0          
+
+        CLASS   BANK1          
+                param1         100      100       9C     1
+
+        CLASS   BANK2          
+
+        CLASS   BANK3          
+
+        CLASS   BANK4          
+
+        CLASS   BANK5          
+
+        CLASS   BANK6          
+
+        CLASS   BANK7          
+
+        CLASS   BANK8          
+
+        CLASS   BANK9          
+
+        CLASS   BANK10         
+
+        CLASS   BANK11         
+
+        CLASS   BANK12         
+
+        CLASS   BANK13         
+
+        CLASS   BANK14         
+
+        CLASS   BANK15         
+
+        CLASS   NVRAM          
+
+        CLASS   FARRAM         
+
+        CLASS   CONFIG         
+
+        CLASS   IDLOC          
+
+        CLASS   EEDATA         
+
+
+
+SEGMENTS        Name           Load    Length   Top     Selector    Space Class
+
+                param1          000100  00009C  00019C       100       1  BANK1   
+                reset_vec       000800  000004  000804       400       0  CODE    
+                intcode         000808  00002E  000836       404       0  CODE    
+                smallconst      001000  0000B4  0010B4       800       0  SMALLCON
+                idata           0010B4  00454C  005600       85A       0  CODE    
+
+
+UNUSED ADDRESS RANGES
+
+        BANK0            000010-0000FF
+        BANK1            00019C-0001FF
+        BANK10           000A00-000AFF
+        BANK11           000B00-000BFF
+        BANK12           000C00-000CFF
+        BANK13           000D00-000DFF
+        BANK14           000E00-000EFF
+        BANK15           000F00-000F7F
+        BANK2            000200-0002FF
+        BANK3            000300-0003FF
+        BANK4            000400-0004FF
+        BANK5            000500-0005FF
+        BANK6            000600-0006FF
+        BANK7            000700-0007FF
+        BANK8            000800-0008FF
+        BANK9            000900-0009FF
+        BIGRAM           000010-0000FF
+                         00019C-000F7F
+        CODE             000804-000807
+                         000836-000FFF
+                         005600-00FFFF
+        COMRAM           000010-00007F
+        CONFIG           300000-30000D
+        CONST            000000-0007FF
+                         000804-000807
+                         000836-000FFF
+                         005600-00FFFF
+        EEDATA           F00000-F003FF
+        FARRAM           000000-000000
+        IDLOC            200000-200007
+        MEDIUMCONST      005600-00FFFF
+        NVRAM            000F00-000F7F
+        RAM              000010-0000FF
+                         00019C-000F7F
+        SMALLCONST       005600-00FFFF
+
+                                  Symbol Table
+
+??_IntServe          param1       00018F
+??_LCD_Init          param1       000122
+??_LCD_Inst          param1       000125
+??_LCD_Move          param1       000124
+??_LCD_Out           param1       000128
+??_LCD_Pause         param1       000136
+??_LCD_Strobe        param1       000136
+??_LCD_Write         param1       000135
+??_Wait_ms           param1       000128
+??___aldiv           param1       00013C
+??___almod           param1       00013C
+??___asftadd         param1       000160
+??___asftdiv         param1       000160
+??___asftmul         param1       000160
+??___asftsub         param1       000160
+??___awdiv           param1       00017E
+??___awmod           param1       00017E
+??___ftadd           param1       00016C
+??___ftdiv           param1       000166
+??___ftge            param1       000161
+??___ftmul           param1       000180
+??___ftneg           param1       00015E
+??___ftpack          param1       00018A
+??___ftsub           param1       000166
+??___fttol           param1       00015F
+??___ftunpack        param1       00018B
+??___lldiv           param1       000163
+??___llmod           param1       000163
+??___lltoft          param1       00015F
+??___wmul            param1       00017E
+??__tdiv_to_l_       param1       000161
+??_fround            param1       00015E
+??_isdigit           param1       00015C
+??_main              param1       000100
+??_scale             param1       00015E
+??_sprintf           param1       00012B
+?_IntServe           param1       00018F
+?_LCD_Init           param1       000122
+?_LCD_Inst           param1       000124
+?_LCD_Move           param1       000122
+?_LCD_Out            param1       000122
+?_LCD_Pause          param1       000136
+?_LCD_Strobe         param1       000136
+?_LCD_Write          param1       000134
+?_Wait_ms            param1       000126
+?___aldiv            param1       000134
+?___almod            param1       000134
+?___asftadd          param1       00015B
+?___asftdiv          param1       00015B
+?___asftmul          param1       00015B
+?___asftsub          param1       00015B
+?___awdiv            param1       00017A
+?___awmod            param1       00017A
+?___ftadd            param1       000166
+?___ftdiv            param1       000160
+?___ftge             param1       00015B
+?___ftmul            param1       00017A
+?___ftneg            param1       00015B
+?___ftpack           param1       000187
+?___ftsub            param1       000160
+?___fttol            param1       00015B
+?___ftunpack         param1       000187
+?___lldiv            param1       00015B
+?___llmod            param1       00015B
+?___lltoft           param1       00015B
+?___wmul             param1       00017A
+?__tdiv_to_l_        param1       00015B
+?_fround             param1       00015B
+?_isdigit            param1       00015B
+?_main               param1       000100
+?_scale              param1       00015B
+?_sprintf            param1       000122
+LCD_Inst@c           param1       000124
+LCD_Move@Col         param1       000123
+LCD_Move@Row         param1       000122
+LCD_Out@A            param1       000129
+LCD_Out@D            param1       000126
+LCD_Out@DATA         param1       000122
+LCD_Out@N            param1       000127
+LCD_Out@i            param1       000128
+LCD_Pause@x          param1       000136
+LCD_Write@c          param1       000134
+Wait_ms@X            param1       000126
+Wait_ms@i            param1       000128
+Wait_ms@j            param1       00012A
+_ADCON1              (abs)        000FC1
+_CCP1CON             (abs)        000FBD
+_CCP1IE              (abs)        007CEA
+_CCP1IF              (abs)        007CF2
+_CCP2CON             (abs)        000FBA
+_CCP2IE              (abs)        007D00
+_CCP2IF              (abs)        007D08
+_CCPR1               (abs)        000FBE
+_CCPR2               (abs)        000FBB
+_Final_TIME          (abs)        000008
+_GIE                 (abs)        007F97
+_IntServe            text35       00500A
+_LCD_Init            text4        00517A
+_LCD_Inst            text21       005374
+_LCD_Move            text2        00520C
+_LCD_Out             text1        004620
+_LCD_Pause           text31       005590
+_LCD_Strobe          text25       0055EC
+_LCD_Write           text17       005554
+_PEIE                (abs)        007F96
+_PORTD               (abs)        000F83
+_RB1                 (abs)        007C09
+_RD1                 (abs)        007C19
+_RD2                 (abs)        007C1A
+_RD3                 (abs)        007C1B
+_T1CON               (abs)        000FCD
+_TIME                (abs)        00000C
+_TIME0               (abs)        000000
+_TIME1               (abs)        000004
+_TMR1CS              (abs)        007E69
+_TMR1IE              (abs)        007CE8
+_TMR1IF              (abs)        007CF0
+_TMR1IP              (abs)        007CF8
+_TMR1ON              (abs)        007E68
+_TRISA               (abs)        000F92
+_TRISB               (abs)        000F93
+_TRISC               (abs)        000F94
+_TRISC1              (abs)        007CA1
+_TRISC2              (abs)        007CA2
+_TRISD               (abs)        000F95
+_TRMT                (abs)        007D61
+_TXREG               (abs)        000FAD
+_Wait_ms             text26       005290
+__Bnvbit             nvbit        000010
+__Brbit              rbit         000010
+__HRAM               (abs)        000000
+__Habsbss0           (abs)        000010
+__Hbigbss            bigbss       00019C
+__Hbigdata           bigdata      00019C
+__Hbss               bss          000010
+__Hclrtext           clrtext      0010B4
+__Hconfig            config       300000
+__Hconst             const        0010B4
+__Hdata              data         0010B4
+__Heeprom_data       eeprom_data  F00000
+__Hend_init          end_init     000836
+__Hfarbss            farbss       000000
+__Hfardata           fardata      000000
+__Hibigdata          ibigdata     0010B4
+__Hidata             idata        0010B4
+__Hidloc             idloc        200000
+__Hifardata          ifardata     0010B4
+__Hinit              init         000824
+__Hintcode           intcode      000818
+__Hintcodelo         intcodelo    000818
+__Hintentry          intentry     0010B4
+__Hintret            intret       0010B4
+__Hintsave_regs      intsave_regs 00019C
+__Hirdata            irdata       0010B4
+__Hmediumconst       mediumconst  0010B4
+__Hnvbit             nvbit        000080
+__Hnvram             nvram        0010B4
+__Hnvrram            nvrram       000010
+__Hparam             param1       00019C
+__Hparam0            param0       0010B4
+__Hparam1            param1       00019C
+__Hparam10           param10      0010B4
+__Hparam11           param11      0010B4
+__Hparam12           param12      0010B4
+__Hparam13           param13      0010B4
+__Hparam14           param14      0010B4
+__Hparam15           param15      0010B4
+__Hparam2            param2       0010B4
+__Hparam3            param3       0010B4
+__Hparam4            param4       0010B4
+__Hparam5            param5       0010B4
+__Hparam6            param6       0010B4
+__Hparam7            param7       0010B4
+__Hparam8            param8       0010B4
+__Hparam9            param9       0010B4
+__Hpowerup           powerup      000818
+__Hramtop            ramtop       001000
+__Hrbit              rbit         000080
+__Hrbss              rbss         000010
+__Hrdata             rdata        000010
+__Hreset_vec         reset_vec    000804
+__Hrparam            rparam       0010B4
+__Hsmallconst        smallconst   0010B4
+__Hstruct            struct       000010
+__Htemp              temp         000010
+__Htext              text         0010B4
+__Htext0             text0        0010B4
+__Htext1             text1        0010B4
+__Htext10            text10       0010B4
+__Htext11            text11       0010B4
+__Htext12            text12       0010B4
+__Htext13            text13       0010B4
+__Htext14            text14       0010B4
+__Htext15            text15       0010B4
+__Htext16            text16       0010B4
+__Htext17            text17       0010B4
+__Htext18            text18       0010B4
+__Htext19            text19       0010B4
+__Htext2             text2        0010B4
+__Htext20            text20       0010B4
+__Htext21            text21       0010B4
+__Htext22            text22       0010B4
+__Htext23            text23       0010B4
+__Htext24            text24       0010B4
+__Htext25            text25       0010B4
+__Htext26            text26       0010B4
+__Htext27            text27       0010B4
+__Htext28            text28       0010B4
+__Htext29            text29       0010B4
+__Htext3             text3        0010B4
+__Htext30            text30       0010B4
+__Htext31            text31       0010B4
+__Htext32            text32       0010B4
+__Htext33            text33       0010B4
+__Htext34            text34       0010B4
+__Htext35            text35       0010B4
+__Htext4             text4        0010B4
+__Htext5             text5        0010B4
+__Htext6             text6        0010B4
+__Htext7             text7        0010B4
+__Htext8             text8        0010B4
+__Htext9             text9        0010B4
+__LRAM               (abs)        000001
+__Labsbss0           (abs)        000000
+__Lbigbss            bigbss       00019C
+__Lbigdata           bigdata      00019C
+__Lbss               bss          000010
+__Lclrtext           clrtext      0010B4
+__Lconfig            config       300000
+__Lconst             const        0010B4
+__Ldata              (abs)        000000
+__Leeprom_data       eeprom_data  F00000
+__Lend_init          end_init     000824
+__Lfarbss            farbss       000000
+__Lfardata           fardata      000000
+__Libigdata          ibigdata     0010B4
+__Lidata             idata        0010B4
+__Lidloc             idloc        200000
+__Lifardata          ifardata     0010B4
+__Linit              init         000818
+__Lintcode           intcode      000808
+__Lintcodelo         intcodelo    000818
+__Lintentry          intentry     0010B4
+__Lintret            intret       0010B4
+__Lintsave_regs      intsave_regs 00019C
+__Lirdata            irdata       0010B4
+__Lmediumconst       mediumconst  0010B4
+__Lnvbit             nvbit        000080
+__Lnvram             nvram        0010B4
+__Lnvrram            nvrram       000010
+__Lparam             param1       000100
+__Lparam0            param0       0010B4
+__Lparam1            param1       000100
+__Lparam10           param10      0010B4
+__Lparam11           param11      0010B4
+__Lparam12           param12      0010B4
+__Lparam13           param13      0010B4
+__Lparam14           param14      0010B4
+__Lparam15           param15      0010B4
+__Lparam2            param2       0010B4
+__Lparam3            param3       0010B4
+__Lparam4            param4       0010B4
+__Lparam5            param5       0010B4
+__Lparam6            param6       0010B4
+__Lparam7            param7       0010B4
+__Lparam8            param8       0010B4
+__Lparam9            param9       0010B4
+__Lpowerup           powerup      000818
+__Lramtop            ramtop       001000
+__Lrbit              rbit         000080
+__Lrbss              rbss         000010
+__Lrdata             rdata        000010
+__Lreset_vec         reset_vec    000800
+__Lrparam            rparam       0010B4
+__Lsmallconst        smallconst   001000
+__Lstruct            struct       000010
+__Ltemp              temp         000010
+__Ltext              text         0010B4
+__Ltext0             text0        0010B4
+__Ltext1             text1        0010B4
+__Ltext10            text10       0010B4
+__Ltext11            text11       0010B4
+__Ltext12            text12       0010B4
+__Ltext13            text13       0010B4
+__Ltext14            text14       0010B4
+__Ltext15            text15       0010B4
+__Ltext16            text16       0010B4
+__Ltext17            text17       0010B4
+__Ltext18            text18       0010B4
+__Ltext19            text19       0010B4
+__Ltext2             text2        0010B4
+__Ltext20            text20       0010B4
+__Ltext21            text21       0010B4
+__Ltext22            text22       0010B4
+__Ltext23            text23       0010B4
+__Ltext24            text24       0010B4
+__Ltext25            text25       0010B4
+__Ltext26            text26       0010B4
+__Ltext27            text27       0010B4
+__Ltext28            text28       0010B4
+__Ltext29            text29       0010B4
+__Ltext3             text3        0010B4
+__Ltext30            text30       0010B4
+__Ltext31            text31       0010B4
+__Ltext32            text32       0010B4
+__Ltext33            text33       0010B4
+__Ltext34            text34       0010B4
+__Ltext35            text35       0010B4
+__Ltext4             text4        0010B4
+__Ltext5             text5        0010B4
+__Ltext6             text6        0010B4
+__Ltext7             text7        0010B4
+__Ltext8             text8        0010B4
+__Ltext9             text9        0010B4
+__S0                 (abs)        F00000
+__S1                 (abs)        000F00
+___aldiv             text18       003F8E
+___aldiv@counter     param1       00013C
+___aldiv@dividend    param1       000134
+___aldiv@divisor     param1       000138
+___aldiv@quotient    param1       00013E
+___aldiv@sign        param1       00013D
+___almod             text16       004498
+___almod@counter     param1       00013D
+___almod@dividend    param1       000134
+___almod@divisor     param1       000138
+___almod@sign        param1       00013C
+___asftadd           text10       00544A
+___asftadd@f1p       param1       00015B
+___asftadd@f2        param1       00015D
+___asftdiv           text13       00548E
+___asftdiv@f1p       param1       00015B
+___asftdiv@f2        param1       00015D
+___asftmul           text11       0053C2
+___asftmul@f1p       param1       00015B
+___asftmul@f2        param1       00015D
+___asftsub           text22       005406
+___asftsub@f1p       param1       00015B
+___asftsub@f2        param1       00015D
+___awdiv             text27       004A2A
+___awdiv@counter     param1       00017E
+___awdiv@dividend    param1       00017A
+___awdiv@divisor     param1       00017C
+___awdiv@quotient    param1       000180
+___awdiv@sign        param1       00017F
+___awmod             text30       004C70
+___awmod@counter     param1       00017F
+___awmod@dividend    param1       00017A
+___awmod@divisor     param1       00017C
+___awmod@sign        param1       00017E
+___ftadd             text32       0034C6
+___ftadd@cntr        param1       00016D
+___ftadd@exp1        param1       000170
+___ftadd@exp2        param1       00016F
+___ftadd@f1          param1       000166
+___ftadd@f2          param1       000169
+___ftadd@sign1       param1       00016E
+___ftadd@sign2       param1       00016C
+___ftdiv             text28       00430A
+___ftdiv@exp1        param1       000168
+___ftdiv@exp2        param1       000166
+___ftdiv@f1          param1       000160
+___ftdiv@f2          param1       000163
+___ftdiv@f3          param1       00016A
+___ftdiv@sign1       param1       000167
+___ftdiv@sign2       param1       000169
+___ftge              text12       004E5A
+___ftge@ff1          param1       00015B
+___ftge@ff2          param1       00015E
+___ftmul             text23       004152
+___ftmul@cntr        param1       000182
+___ftmul@exp1        param1       000181
+___ftmul@f1          param1       00017A
+___ftmul@f2          param1       00017D
+___ftmul@f3          param1       000183
+___ftmul@sign1       param1       000180
+___ftneg             text8        005516
+___ftneg@f1          param1       00015B
+___ftpack            text34       0048EC
+___ftpack@arg        param1       000187
+___ftpack@exp        param1       000189
+___ftsub             text29       0054D2
+___ftsub@f1          param1       000160
+___ftsub@f2          param1       000163
+___fttol             text9        0047A8
+___fttol@exp1        param1       000160
+___fttol@f1          param1       00015B
+___fttol@lval        param1       000161
+___fttol@sign1       param1       00015F
+___ftunpack          text33       0050D0
+___ftunpack@arg      param1       000187
+___ftunpack@exp      param1       000189
+___ftunpack@sign     param1       00018B
+___lldiv             text14       004B5A
+___lldiv@counter     param1       000163
+___lldiv@dividend    param1       00015B
+___lldiv@divisor     param1       00015F
+___lldiv@quotient    param1       000164
+___llmod             text6        004D78
+___llmod@counter     param1       000163
+___llmod@dividend    param1       00015B
+___llmod@divisor     param1       00015F
+___lltoft            text15       004F3A
+___lltoft@c          param1       00015B
+___lltoft@exp        param1       00015F
+___lltoft@f1         param1       000160
+___wmul              text24       00530E
+___wmul@multiplicand param1       00017C
+___wmul@multiplier   param1       00017A
+___wmul@product      param1       00017E
+__accesstop          (abs)        000080
+__activetblptr       (abs)        000003
+__end_of_IntServe    text35       0050D0
+__end_of_LCD_Init    text4        00520C
+__end_of_LCD_Inst    text21       0053C2
+__end_of_LCD_Move    text2        005290
+__end_of_LCD_Out     text1        0047A8
+__end_of_LCD_Pause   text31       0055C6
+__end_of_LCD_Strobe  text25       005600
+__end_of_LCD_Write   text17       005590
+__end_of_Wait_ms     text26       00530E
+__end_of___aldiv     text18       004152
+__end_of___almod     text16       004620
+__end_of___asftadd   text10       00548E
+__end_of___asftdiv   text13       0054D2
+__end_of___asftmul   text11       005406
+__end_of___asftsub   text22       00544A
+__end_of___awdiv     text27       004B5A
+__end_of___awmod     text30       004D78
+__end_of___ftadd     text32       003800
+__end_of___ftdiv     text28       004498
+__end_of___ftge      text12       004F3A
+__end_of___ftmul     text23       00430A
+__end_of___ftneg     text8        005554
+__end_of___ftpack    text34       004A2A
+__end_of___ftsub     text29       005516
+__end_of___fttol     text9        0048EC
+__end_of___ftunpack  text33       00517A
+__end_of___lldiv     text14       004C70
+__end_of___llmod     text6        004E5A
+__end_of___lltoft    text15       00500A
+__end_of___wmul      text24       005374
+__end_of__tdiv_to_l_ text20       003F8E
+__end_of_fround      text7        003B08
+__end_of_isdigit     text19       0055EC
+__end_of_main        text0        003D8A
+__end_of_scale       text5        0034C6
+__end_of_sprintf     text3        002F36
+__mediumconst        mediumconst  0010B4
+__npowers_           smallconst   001029
+__powers_            smallconst   001050
+__ramtop             ramtop       001000
+__smallconst         smallconst   001000
+__tdiv_to_l_         text20       003D8A
+__tdiv_to_l_@cntr    param1       000161
+__tdiv_to_l_@exp1    param1       000162
+__tdiv_to_l_@f1      param1       00015B
+__tdiv_to_l_@f2      param1       00015E
+__tdiv_to_l_@quot    param1       000163
+_dpowers             smallconst   001001
+_exit                init         000818
+_fround              text7        003800
+_fround$1239         param1       00015E
+_fround$1240         param1       000160
+_fround$1241         param1       000162
+_fround$1242         param1       000164
+_fround$1247         param1       000167
+_hexpowers           smallconst   001077
+_isdigit             text19       0055C6
+_main                text0        003B08
+_scale               text5        002F36
+_scale$1210          param1       00015E
+_scale$1211          param1       000160
+_scale$1212          param1       000162
+_scale$1213          param1       000164
+_scale$1217          param1       000167
+_scale$1224          param1       000169
+_scale$1225          param1       00016B
+_scale$1226          param1       00016D
+_scale$1227          param1       00016F
+_scale$1231          param1       000172
+_sprintf             text3        0010B4
+_sprintf$1154        param1       00012B
+_sprintf$1168        param1       00012E
+_sprintf$1169        param1       000131
+_sprintf$1179        param1       000132
+_sprintf$1187        param1       000135
+_sprintf$1193        param1       000138
+_sprintf$1194        param1       00013B
+_sprintf$1202        param1       00013C
+fround@prec          param1       00015B
+int_func             intcode      000808
+intlevel0            text         005600
+intlevel1            text         005600
+intlevel2            text         005600
+intlevel3            text         005600
+isdigit@c            param1       00015B
+main@HEIGHT_f        param1       000102
+main@HEIGHT_m        param1       000105
+main@TEMP            param1       000108
+main@array           param1       00010B
+main@i               param1       000100
+scale@scl            param1       00015B
+sprintf@_val         param1       00014E
+sprintf@ap           param1       00013E
+sprintf@c            param1       00013D
+sprintf@exp          param1       000140
+sprintf@f            param1       000124
+sprintf@flag         param1       000146
+sprintf@fval         param1       00014B
+sprintf@integ        param1       000148
+sprintf@prec         param1       000144
+sprintf@sp           param1       000122
+sprintf@temp         param1       000152
+sprintf@width        param1       000142
+start                init         000818
